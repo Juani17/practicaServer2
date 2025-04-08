@@ -1,0 +1,83 @@
+# 🖥️ Servidor Web con Express + Build de React
+
+Este proyecto consiste en montar un servidor web utilizando **Node.js** y **Express**, que sirva una aplicación de **React** construida con **Vite**.
+
+## 📁 Estructura del Proyecto
+
+```
+practicaServer2/
+├── backend/
+│   ├── server.js
+│   └── package.json
+└── frontend/
+    └── serverFront/
+        ├── src/
+        ├── dist/            ← Se genera al hacer build
+        ├── package.json
+        └── vite.config.js
+```
+
+---
+
+## 🚀 ¿Cómo funciona?
+
+- La carpeta `frontend/serverFront/` contiene una app de React construida con Vite.
+- Al ejecutar `npm run build` dentro de `serverFront`, se genera la carpeta `dist/` con el HTML, JS y CSS optimizados.
+- El servidor Express en `backend/` se encarga de servir los archivos de esa carpeta `dist/`.
+- También redirige todas las rutas al archivo `index.html` para soportar el enrutamiento en el cliente (SPA).
+
+---
+
+## 🔧 Pasos para ejecutar el proyecto
+
+### 1. Instalar dependencias del frontend
+
+EN CONSOLA
+cd frontend/serverFront
+npm install
+
+### 2. Generar el build de producción
+
+EN CONSOLA
+npm run build
+
+
+> Esto crea la carpeta `dist/` con los archivos estáticos que se servirán desde el backend.
+
+### 3. Instalar dependencias del backend
+
+EN CONSOLA
+cd ../../backend
+npm install
+
+
+### 4. Ejecutar el servidor
+
+EN CONSOLA
+node server.js
+
+
+### 5. Abrir en el navegador
+
+Abrí tu navegador en:
+
+```
+http://localhost:3000
+```
+
+---
+
+## ✅ Resultado Esperado
+
+Deberías ver la app de React funcionando correctamente, servida desde el servidor Express.
+
+---
+
+## 📌 Notas
+
+- Asegurate de que la ruta al `dist/` en `server.js` esté bien configurada.
+- Si movés carpetas, ajustá el `path.join(...)` en `server.js` para que coincida.
+
+```
+const staticPath = path.join(__dirname, '..', 'frontend', 'serverFront', 'dist');
+```
