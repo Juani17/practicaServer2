@@ -1,8 +1,11 @@
-# 🖥️ Servidor Web con Express + Build de React
+Hola profe, en la explicación y en el proyecto me ayude un poco con el chat, por ejemplo, hice dos carpetas llamadas frontend y backend porque sino tenia un problema con las rutas y al hacerlo se soluciono, capaz era un error mio pero me sirvio ese consejo del chat,
+deje el la web de base como viene con vite + react, no se si habia que hacer algo mas.
+
+# Servidor Web con Express + Build de React
 
 Este proyecto consiste en montar un servidor web utilizando **Node.js** y **Express**, que sirva una aplicación de **React** construida con **Vite**.
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 ```
 practicaServer2/
@@ -19,7 +22,7 @@ practicaServer2/
 
 ---
 
-## 🚀 ¿Cómo funciona?
+## ¿Cómo funciona?
 
 - La carpeta `frontend/serverFront/` contiene una app de React construida con Vite.
 - Al ejecutar `npm run build` dentro de `serverFront`, se genera la carpeta `dist/` con el HTML, JS y CSS optimizados.
@@ -28,7 +31,7 @@ practicaServer2/
 
 ---
 
-## 🔧 Pasos para ejecutar el proyecto
+## Pasos para ejecutar el proyecto
 
 ### 1. Instalar dependencias del frontend
 
@@ -67,13 +70,13 @@ http://localhost:3000
 
 ---
 
-## ✅ Resultado Esperado
+## Resultado Esperado
 
 Deberías ver la app de React funcionando correctamente, servida desde el servidor Express.
 
 ---
 
-## 📌 Notas
+## Notas
 
 - Asegurate de que la ruta al `dist/` en `server.js` esté bien configurada.
 - Si movés carpetas, ajustá el `path.join(...)` en `server.js` para que coincida.
